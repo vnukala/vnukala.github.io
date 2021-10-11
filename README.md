@@ -1,4 +1,11 @@
-## Welcome to GitHub Pages
+## Vasudha Nukala
+
+![Image](src)
+
+### Welcome!
+I am a Ph.D. Candidate in [Finance department](https://olin.wustl.edu/EN-US/academic-programs/PhD/finance/Pages/default.aspx) at [Olin Business School, Washington University in St. Louis.](https://olin.wustl.edu/EN-US/Pages/default.aspx)
+
+My primary research interests are consumer finance, financial intermediation, fintech and corporate finance. 
 
 You can use the [editor on GitHub](https://github.com/vnukala/vnukala.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
