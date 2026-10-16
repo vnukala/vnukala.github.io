@@ -1,4 +1,4 @@
-# Vasudha Nukala — academic website
+# Vasudha Nukala
 
 A responsive, static GitHub Pages site: single-page academic homepage plus a separate notebook.
 
