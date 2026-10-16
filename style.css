@@ -567,3 +567,13 @@ li {
 .top .links a {
   font-size: 13px;
 }
+
+header.top a.brand,
+header.top nav.links a {
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  letter-spacing: normal !important;
+  color: #475569 !important;
+}
