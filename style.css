@@ -562,3 +562,8 @@ li {
 .photo-contact a:hover {
   text-decoration: underline;
 }
+
+.top .brand,
+.top .links a {
+  font-size: 13px;
+}
