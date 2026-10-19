@@ -358,159 +358,309 @@
       Leave them empty when not yet available.
     */
 
-    const seminars2026 = [
-      ["Rohit Allena",
-       "University of Houston",
-       "7 August 2026", "", ""],
 
-      ["Susan Cherry",
-       "UT Austin",
-       "14 August 2026", "", ""],
+/*
+  SEMINAR DATA
 
-      ["Filipe Correia",
-       "University of Georgia",
-       "25 September 2026", "", ""],
+  Each entry contains:
+  1. Speaker name
+  2. Institution
+  3. Seminar date
+  4. Author webpage
+  5. Paper URL
 
-      ["Will Cassidy",
-       "WashU Olin",
-       "9 October 2026", "", ""],
+  Author webpages are populated.
+  Paper URLs will be added once the presented papers are verified.
+*/
 
-      ["Goutham Gopalakrishna",
-       "University of Toronto",
-       "23 October 2026", "", ""],
+const seminars2026 = [
+  [
+    "Rohit Allena",
+    "University of Houston",
+    "7 August 2026",
+    "https://www.rohitallena.com/",
+    ""
+  ],
+  [
+    "Susan Cherry",
+    "UT Austin",
+    "14 August 2026",
+    "https://www.susan-cherry.com/",
+    ""
+  ],
+  [
+    "Filipe Correia",
+    "University of Georgia",
+    "25 September 2026",
+    "https://www.terry.uga.edu/directory/filipe-correia/",
+    ""
+  ],
+  [
+    "Will Cassidy",
+    "WashU Olin",
+    "9 October 2026",
+    "https://williamcassidy.com/",
+    ""
+  ],
+  [
+    "Goutham Gopalakrishna",
+    "University of Toronto",
+    "23 October 2026",
+    "https://www.rotman.utoronto.ca/the-rotman-experience/our-community/people/gopalakrishna-goutham-/",
+    ""
+  ],
+  [
+    "Daniel Paravisini",
+    "London School of Economics",
+    "6 November 2026",
+    "https://www.lse.ac.uk/people/daniel-paravisini",
+    ""
+  ],
+  [
+    "Hannes Wagner",
+    "Bocconi University",
+    "20 November 2026",
+    "https://www.unibocconi.it/en/faculty/hannes-wagner",
+    ""
+  ],
+  [
+    "Constantine Yannelis",
+    "University of Cambridge",
+    "4 December 2026",
+    "https://www.yannelis.com/",
+    ""
+  ],
+  [
+    "Sabrina Howell",
+    "Harvard Business School",
+    "17 December 2026",
+    "https://www.hbs.edu/news/stories/sabrina-howell-profile-2025",
+    ""
+  ],
+  [
+    "Thomas Flanagan",
+    "Ohio State University",
+    "5 February 2027",
+    "https://www.thomas-flanagan.com/",
+    ""
+  ],
+  [
+    "Joao Gomes",
+    "Wharton",
+    "19 February 2027",
+    "https://fnce.wharton.upenn.edu/profile/gomesj/",
+    ""
+  ],
+  [
+    "Alexander Copestake",
+    "IMF",
+    "26 February 2027",
+    "https://copestake.info/",
+    ""
+  ],
+  [
+    "Barry Scholnick",
+    "University of Alberta",
+    "5 March 2027",
+    "https://apps.ualberta.ca/directory/person/bscholni",
+    ""
+  ],
+  [
+    "Zacharias Sautner",
+    "University of Zurich",
+    "12 March 2027",
+    "https://www.df.uzh.ch/en/people/professor/sautner",
+    ""
+  ],
+  [
+    "Brett Green",
+    "WashU Olin",
+    "19 March 2027",
+    "https://olin.washu.edu/faculty/brett-green",
+    ""
+  ],
+  [
+    "Vaishali Garga",
+    "Federal Reserve Bank of Boston",
+    "26 March 2027",
+    "https://www.bostonfed.org/people/bank/vaishali-garga.aspx",
+    ""
+  ]
+];
 
-      ["Daniel Paravisini",
-       "London School of Economics",
-       "6 November 2026", "", ""],
+const seminars2025 = [
+  [
+    "Karsten Müller",
+    "National University of Singapore",
+    "",
+    "https://www.karstenmueller.com/",
+    ""
+  ],
+  [
+    "Emilio Bisetti",
+    "HKUST",
+    "",
+    "https://fina.hkust.edu.hk/faculty/directory/bisetti",
+    ""
+  ],
+  [
+    "Naveen Gondhi",
+    "INSEAD",
+    "",
+    "https://www.insead.edu/faculty/naveen-gondhi",
+    ""
+  ],
+  [
+    "Agustin Hurtado",
+    "University of Maryland",
+    "",
+    "https://www.rhsmith.umd.edu/directory/agustin-hurtado",
+    ""
+  ],
+  [
+    "Alminas Zaldokas",
+    "National University of Singapore",
+    "",
+    "https://www.alminas.com/",
+    ""
+  ],
+  [
+    "Elena Loutskina",
+    "University of Virginia",
+    "",
+    "https://www.darden.virginia.edu/faculty-research/directory/elena-loutskina",
+    ""
+  ],
+  [
+    "Satyajit Chatterjee",
+    "Philadelphia Fed",
+    "",
+    "https://www.philadelphiafed.org/our-people/satyajit-chatterjee",
+    ""
+  ],
+  [
+    "Sean Higgins",
+    "Northwestern University",
+    "",
+    "https://www.kellogg.northwestern.edu/academics-research/faculty/higgins_sean/",
+    ""
+  ],
+  [
+    "Tetyana Balyuk",
+    "Emory University",
+    "",
+    "https://business.emory.edu/faculty/profiles/tetyana-balyuk",
+    ""
+  ],
+  [
+    "Tianyue Ruan",
+    "National University of Singapore",
+    "",
+    "https://truan.github.io/",
+    ""
+  ],
+  [
+    "Deeksha Gupta",
+    "Johns Hopkins University",
+    "",
+    "https://carey.jhu.edu/faculty/faculty-directory/deeksha-gupta-phd",
+    ""
+  ],
+  [
+    "Nishant Vats",
+    "Washington University in St. Louis",
+    "",
+    "https://nishvats.github.io/",
+    ""
+  ],
+  [
+    "Thorsten Beck",
+    "European University Institute",
+    "",
+    "https://thorstenbeck.com/",
+    ""
+  ],
+  [
+    "Kunal Sachdeva",
+    "University of Michigan",
+    "",
+    "https://www.kunalsachdeva.com/",
+    ""
+  ]
+];
 
-      ["Hannes Wagner",
-       "Bocconi University",
-       "20 November 2026", "", ""],
-
-      ["Constantine Yannelis",
-       "University of Cambridge",
-       "4 December 2026", "", ""],
-
-      ["Sabrina Howell",
-       "Harvard Business School",
-       "17 December 2026", "", ""],
-
-      ["Thomas Flanagan",
-       "Ohio State University",
-       "5 February 2027", "", ""],
-
-      ["Joao Gomes",
-       "Wharton",
-       "19 February 2027", "", ""],
-
-      ["Alexander Copestake",
-       "IMF",
-       "26 February 2027", "", ""],
-
-      ["Barry Scholnick",
-       "University of Alberta",
-       "5 March 2027", "", ""],
-
-      ["Zacharias Sautner",
-       "University of Zurich",
-       "12 March 2027", "", ""],
-
-      ["Brett Green",
-       "WashU Olin",
-       "19 March 2027", "", ""],
-
-      ["Vaishali Garga",
-       "Federal Reserve Bank of Boston",
-       "26 March 2027", "", ""]
-    ];
-
-    const seminars2025 = [
-      ["Karsten Müller",
-       "National University of Singapore", "", "", ""],
-
-      ["Emilio Bisetti",
-       "HKUST", "", "", ""],
-
-      ["Naveen Gondhi",
-       "INSEAD", "", "", ""],
-
-      ["Agustin Hurtado",
-       "University of Maryland", "", "", ""],
-
-      ["Alminas Zaldokas",
-       "National University of Singapore", "", "", ""],
-
-      ["Elena Loutskina",
-       "University of Virginia", "", "", ""],
-
-      ["Satyajit Chatterjee",
-       "Philadelphia Fed", "", "", ""],
-
-      ["Sean Higgins",
-       "Northwestern University", "", "", ""],
-
-      ["Tetyana Balyuk",
-       "Emory University", "", "", ""],
-
-      ["Tianyue Ruan",
-       "National University of Singapore", "", "", ""],
-
-      ["Deeksha Gupta",
-       "Johns Hopkins University", "", "", ""],
-
-      ["Nishant Vats",
-       "Washington University in St. Louis", "", "", ""],
-
-      ["Thorsten Beck",
-       "European University Institute", "", "", ""],
-
-      ["Kunal Sachdeva",
-       "University of Michigan", "", "", ""],
-
-    ];
-
-    const seminars2024 = [
-      ["Kim Fe Cramer",
-       "London School of Economics",
-       "25 October 2024", "", ""],
-
-      ["Chanik Jo",
-       "Chinese University of Hong Kong",
-       "8 November 2024", "", ""],
-
-      ["Arkodipta Sarkar",
-       "National University of Singapore",
-       "15 November 2024", "", ""],
-
-      ["Shohini Kundu",
-       "UCLA Anderson",
-       "24 January 2025", "", ""],
-
-      ["Richard Thakor",
-       "University of Minnesota",
-       "31 January 2025", "", ""],
-
-      ["Rachel Nam",
-       "USI Lugano / Swiss Finance Institute",
-       "7 February 2025", "", ""],
-
-      ["Marti Subrahmanyam",
-       "NYU Stern",
-       "14 February 2025", "", ""],
-
-      ["Vidhan Goyal",
-       "HKUST",
-       "21 February 2025", "", ""],
-
-      ["Nicola Limodio",
-       "Bocconi University",
-       "28 February 2025", "", ""],
-
-      ["Tony Cookson",
-       "University of Colorado Boulder",
-       "7 March 2025", "", ""]
-    ];
-
+const seminars2024 = [
+  [
+    "Kim Fe Cramer",
+    "London School of Economics",
+    "25 October 2024",
+    "https://www.kimfecramer.com/",
+    ""
+  ],
+  [
+    "Chanik Jo",
+    "Chinese University of Hong Kong",
+    "8 November 2024",
+    "https://chanikjo.github.io/",
+    ""
+  ],
+  [
+    "Arkodipta Sarkar",
+    "National University of Singapore",
+    "15 November 2024",
+    "https://discovery.nus.edu.sg/22792-arkodipta-sarkar",
+    ""
+  ],
+  [
+    "Shohini Kundu",
+    "UCLA Anderson",
+    "24 January 2025",
+    "https://www.anderson.ucla.edu/faculty-and-research/finance/faculty/kundu",
+    ""
+  ],
+  [
+    "Richard Thakor",
+    "University of Minnesota",
+    "31 January 2025",
+    "https://carlsonschool.umn.edu/faculty/richard-thakor",
+    ""
+  ],
+  [
+    "Rachel Nam",
+    "USI Lugano / Swiss Finance Institute",
+    "7 February 2025",
+    "https://www.racheljnam.com/",
+    ""
+  ],
+  [
+    "Marti Subrahmanyam",
+    "NYU Stern",
+    "14 February 2025",
+    "https://www.stern.nyu.edu/faculty/bio/marti-subrahmanyam",
+    ""
+  ],
+  [
+    "Vidhan Goyal",
+    "HKUST",
+    "21 February 2025",
+    "https://fina.hkust.edu.hk/faculty/directory/goyal",
+    ""
+  ],
+  [
+    "Nicola Limodio",
+    "Bocconi University",
+    "28 February 2025",
+    "https://www.nicolalimodio.com/",
+    ""
+  ],
+  [
+    "Tony Cookson",
+    "University of Colorado Boulder",
+    "7 March 2025",
+    "https://www.colorado.edu/business/leeds-directory/faculty/tony-cookson",
+    ""
+  ]
+];
     /*
       PAPER ICON
       Used for every seminar.
