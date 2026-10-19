@@ -40,53 +40,60 @@
       border-bottom: 1px solid #e1e5e8;
     }
 
-    /* Sangmin Oh-inspired compact post lists */
-    #field-notes .notes-list {
-      list-style: disc;
-      padding-left: 20px;
-      margin: 0;
-    }
+    
+/* Consistent compact post lists */
 
-    #field-notes .notes-list li {
-      padding: 4px 0;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      line-height: 1.55;
-    }
+#field-notes .notes-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
 
-    #field-notes .note-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 140px;
-      column-gap: 20px;
-      align-items: baseline;
-    }
+#field-notes .notes-list li {
+  padding: 5px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
 
-    #field-notes .note-title {
-      color: #252525;
-    }
+#field-notes .note-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  column-gap: 20px;
+  align-items: baseline;
+}
 
-    #field-notes .note-link {
-      color: #28617e;
-      text-decoration: none;
-      white-space: nowrap;
-    }
+/* All post titles look the same */
+#field-notes .note-title,
+#field-notes .note-title a {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #252525;
+  text-decoration: none;
+}
 
-    #field-notes .note-link:hover {
-      text-decoration: underline;
-    }
+#field-notes .note-title a:hover {
+  color: #28617e;
+  text-decoration: underline;
+}
 
-    #field-notes .note-date {
-      color: #444;
-      font-size: 14px;
-      text-align: right;
-      white-space: nowrap;
-    }
+/* Consistent dates and statuses */
+#field-notes .note-date {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #444;
+  text-align: right;
+  white-space: nowrap;
+}
 
-    #field-notes .note-planned {
-      color: #888;
-      font-size: 12px;
-    }
-
+#field-notes .note-planned {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #888;
+  text-align: right;
+}
     #field-notes .notes-empty {
       color: #78838d;
       font-size: 14px;
@@ -148,112 +155,105 @@
         markets, research, teaching, and academic life.
       </p>
 
-      <!-- ============================ -->
-      <!-- RESEARCH NOTES -->
-      <!-- ============================ -->
 
-      <section class="notes-section">
+<!-- ============================ -->
+<!-- RESEARCH NOTES -->
+<!-- ============================ -->
 
-        <h3>Research Notes</h3>
+<section class="notes-section">
 
-        <ul class="notes-list">
+  <h3>Research Notes</h3>
 
-          <li>
-            <div class="note-row">
+  <ul class="notes-list">
 
-              <span class="note-title">
-                My First Field Note
-                <a class="note-link"
-                   href="first-post.html"></a>
-              </span>
-
-              <span class="note-date">
-                October 2026
-              </span>
-
-            </div>
-          </li>
-
-          <!-- Add new research posts here -->
-
-        </ul>
-
-      </section>
-
-      <!-- ============================ -->
-      <!-- TEACHING & ACADEMIA -->
-      <!-- ============================ -->
-
-      <section class="notes-section">
-
-        <h3>Teaching & Academia</h3>
-
-        <ul class="notes-list">
-
-          <li>
-            <div class="note-row">
-
-              <span class="note-title">
-                What Makes a Good M&A Deal?
-              </span>
-
-              <span class="note-planned">
-                Planned
-              </span>
-
-            </div>
-          </li>
-
-          <li>
-            <div class="note-row">
-
-              <span class="note-title">
-                The Story Behind a DCF
-              </span>
-
-              <span class="note-planned">
-                Planned
-              </span>
-
-            </div>
-          </li>
-
-          <!-- Add new teaching posts here -->
-
-        </ul>
-
-      </section>
-
-      <!-- ============================ -->
-      <!-- SEMINARS & CONFERENCES -->
-      <!-- ============================ -->
-
-      <section class="notes-section">
-
-        <h3>Seminars & Conference Notes</h3>
-
-        <p class="notes-empty">
-          Notes and reflections from seminars and
-          conferences will appear here.
-        </p>
-
-        <!-- Add seminar posts here -->
-        <ul class="notes-list">
-        <li>
-        <div class="note-row">
+    <li>
+      <div class="note-row">
         <span class="note-title">
-        Reflections from a Finance Conference
-        <a class="note-link"
-           href="conference-reflections.html">[Blog]</a>
-      </span>
+          <a href="first-post.html">
+            My First Field Note
+          </a>
+        </span>
+        <span class="note-date">
+          October 2026
+        </span>
+      </div>
+    </li>
 
-      <span class="note-date">
-        November 2026
-      </span>
-    </div>
-  </li>
-</ul>
+    <!-- Add new research posts here -->
 
+  </ul>
+
+</section>
+
+
+<!-- ============================ -->
+<!-- TEACHING & ACADEMIA -->
+<!-- ============================ -->
+
+<section class="notes-section">
+
+  <h3>Teaching & Academia</h3>
+
+  <ul class="notes-list">
+
+    <li>
+      <div class="note-row">
+        <span class="note-title">
+          What Makes a Good M&A Deal?
+        </span>
+        <span class="note-planned">
+          Planned
+        </span>
+      </div>
+    </li>
+
+    <li>
+      <div class="note-row">
+        <span class="note-title">
+          The Story Behind a DCF
+        </span>
+        <span class="note-planned">
+          Planned
+        </span>
+      </div>
+    </li>
+
+    <!-- Add new teaching posts here -->
+
+  </ul>
+
+</section>
+
+
+<!-- ============================ -->
+<!-- SEMINARS & CONFERENCES -->
+<!-- ============================ -->
+
+<section class="notes-section">
+
+  <h3>Seminars & Conference Notes</h3>
+
+  <ul class="notes-list">
+
+    <li>
+      <div class="note-row">
+        <span class="note-title">
+          <a href="conference-reflections.html">
+            Reflections from a Finance Conference
+          </a>
+        </span>
+        <span class="note-date">
+          November 2026
+        </span>
+      </div>
+    </li>
+
+    <!-- Add new seminar posts here -->
+
+  </ul>
+
+</section>
+      
       </section>
 
     </section>
