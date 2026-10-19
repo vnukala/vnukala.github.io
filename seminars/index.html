@@ -7,7 +7,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ISB Finance Seminar Series">
   <title>ISB Finance Seminar Series | Vasudha Nukala</title>
+
   <link rel="stylesheet" href="../style.css?v=3">
+
+  <style>
+    /* Seminar page only */
+
+    #seminars .seminar-intro {
+      color: #52616e;
+      line-height: 1.7;
+      margin: 18px 0 32px;
+    }
+
+    #seminars .seminar-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    #seminars .seminar-card {
+      border: 1px solid #e1e5e8;
+      border-radius: 4px;
+      padding: 25px 24px;
+      height: 460px;
+      min-width: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    #seminars .seminar-card-header {
+      flex-shrink: 0;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e1e5e8;
+      margin-bottom: 8px;
+    }
+
+    #seminars .seminar-card-header h3 {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: #23313c;
+      margin: 0 0 7px;
+      padding: 0;
+      border: none;
+    }
+
+    #seminars .seminar-card-header p {
+      font-size: 12px;
+      color: #888;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    #seminars .seminar-card-scroll {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      padding-right: 8px;
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5dc transparent;
+    }
+
+    /* One line per speaker */
+
+    #seminars .seminar-entry {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, 1fr)
+        22px;
+      align-items: center;
+      column-gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid #edf0f2;
+      margin: 0;
+    }
+
+    #seminars .seminar-entry:last-child {
+      border-bottom: none;
+    }
+
+    #seminars .seminar-speaker {
+      font-size: 13px;
+      font-weight: 600;
+      color: #23313c;
+      min-width: 0;
+      line-height: 1.45;
+    }
+
+    #seminars .seminar-institution {
+      font-size: 12px;
+      color: #78838d;
+      min-width: 0;
+      line-height: 1.45;
+    }
+
+    #seminars .seminar-speaker a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #seminars .seminar-speaker a:hover {
+      color: #28617e;
+      text-decoration: underline;
+    }
+
+    #seminars .seminar-paper-icon {
+      display: inline-flex;
+      width: 22px;
+      height: 22px;
+      align-items: center;
+      justify-content: center;
+      color: #28617e;
+      text-decoration: none;
+    }
+
+    #seminars .seminar-paper-icon.unavailable {
+      color: #c3cbd0;
+    }
+
+    #seminars a.seminar-paper-icon:hover {
+      opacity: 0.65;
+    }
+
+    #seminars .seminar-paper-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Third year spans full width */
+
+    #seminars #year-2024 {
+      grid-column: 1 / -1;
+      height: 330px;
+    }
+
+    /* Mobile layout */
+
+    @media (max-width: 720px) {
+      #seminars .seminar-card-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      #seminars .seminar-card,
+      #seminars #year-2024 {
+        grid-column: auto;
+        height: 400px;
+        padding: 20px 16px;
+      }
+
+      #seminars .seminar-entry {
+        grid-template-columns:
+          minmax(0, 1fr)
+          minmax(0, 1fr)
+          22px;
+        column-gap: 8px;
+      }
+
+      #seminars .seminar-speaker {
+        font-size: 12px;
+      }
+
+      #seminars .seminar-institution {
+        font-size: 11px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -29,7 +198,6 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main class="wrap">
 
     <section id="seminars" class="seminar-page">
@@ -39,300 +207,48 @@
 
       <p class="seminar-intro">
         The Finance Seminar Series at the Indian School of
-        Business brings together researchers presenting
-        work across financial economics.
-        Below is a record of our seminar speakers,
-        organized by academic year.
+        Business brings together researchers presenting work
+        across financial economics. Below is our seminar
+        archive, organized by academic year.
       </p>
 
       <div class="seminar-card-grid">
 
-      <!-- ===================================== -->
-      <!-- 2026–2027 FINANCE SEMINARS -->
-      <!-- ===================================== -->
-
-      <div class="seminar-year seminar-card" id="year-2026">
-      <div class="seminar-card-scroll">
-
-        <h3>2026–2027</h3>
-
-        <p class="seminar-note">
-          Scheduled Finance seminars for the 2026–2027
-          academic year. Dates are subject to change.
-        </p>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">7 August 2026</span>
-          <h4>Rohit Alleha</h4>
-          <p>University of Houston</p>
+        <!-- 2026–2027 -->
+        <div class="seminar-card" id="year-2026">
+          <div class="seminar-card-header">
+            <h3>2026–2027</h3>
+            <p>Finance Seminar Series · Scheduled speakers</p>
+          </div>
+          <div class="seminar-card-scroll" id="list-2026"></div>
         </div>
 
-        <div class="seminar-entry">
-          <span class="seminar-date">14 August 2026</span>
-          <h4>Susan Cherry</h4>
-          <p>University of Texas at Austin</p>
+        <!-- 2025–2026 -->
+        <div class="seminar-card" id="year-2025">
+          <div class="seminar-card-header">
+            <h3>2025–2026</h3>
+            <p>
+              Finance Seminar Series ·
+              <a href="https://sites.google.com/view/isbfinanceseminar/home"
+                 target="_blank" rel="noopener">
+                Original calendar ↗
+              </a>
+            </p>
+          </div>
+          <div class="seminar-card-scroll" id="list-2025"></div>
         </div>
 
-        <div class="seminar-entry">
-          <span class="seminar-date">25 September 2026</span>
-          <h4>Filipe Correia</h4>
-          <p>University of Georgia</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">9 October 2026</span>
-          <h4>Will Cassidy</h4>
-          <p>Olin Business School, Washington University in St. Louis</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">23 October 2026</span>
-          <h4>Goutham Gopalakrishna</h4>
-          <p>University of Toronto</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">6 November 2026</span>
-          <h4>Daniel Paravisini</h4>
-          <p>London School of Economics</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">20 November 2026</span>
-          <h4>Hannes Wagner</h4>
-          <p>Bocconi University</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">4 December 2026</span>
-          <h4>Constantine Yannelis</h4>
-          <p>University of Cambridge</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">17 December 2026</span>
-          <h4>Sabrina Howell</h4>
-          <p>Harvard Business School</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">5 February 2027</span>
-          <h4>Thomas Flanagan</h4>
-          <p>Ohio State University</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">19 February 2027</span>
-          <h4>Joao Gomes</h4>
-          <p>Wharton School, University of Pennsylvania</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">26 February 2027</span>
-          <h4>Alexander Copestake</h4>
-          <p>International Monetary Fund</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">5 March 2027</span>
-          <h4>Barry Scholnick</h4>
-          <p>University of Alberta</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">12 March 2027</span>
-          <h4>Zacharias Sautner</h4>
-          <p>University of Zurich</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">19 March 2027</span>
-          <h4>Brett Green</h4>
-          <p>Olin Business School, Washington University in St. Louis</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">26 March 2027</span>
-          <h4>Vaishali Garga</h4>
-          <p>Federal Reserve Bank of Boston</p>
+        <!-- 2024–2025 -->
+        <div class="seminar-card" id="year-2024">
+          <div class="seminar-card-header">
+            <h3>2024–2025</h3>
+            <p>Finance Seminar Series · Archive</p>
+          </div>
+          <div class="seminar-card-scroll" id="list-2024"></div>
         </div>
 
       </div>
-        </div>
 
-      <!-- ===================================== -->
-      <!-- 2025–2026 FINANCE SEMINARS -->
-      <!-- ===================================== -->
-
-     
-       <div class="seminar-year seminar-card" id="year-2025">
-        <div class="seminar-card-scroll">
-        <h3>2025–2026</h3>
-
-        <p class="seminar-note">
-          Speaker roster from the
-          <a href="https://sites.google.com/view/isbfinanceseminar/home"
-             target="_blank" rel="noopener">
-            2025–2026 ISB Finance Seminar calendar ↗
-          </a>
-        </p>
-
-        <div class="seminar-entry">
-          <h4>Karsten Müller</h4>
-          <p>National University of Singapore</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Emilio Bisetti</h4>
-          <p>Hong Kong University of Science and Technology</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Naveen Gondhi</h4>
-          <p>INSEAD</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Agustin Hurtado</h4>
-          <p>University of Maryland</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Alminas Zaldokas</h4>
-          <p>National University of Singapore</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Elena Loutskina</h4>
-          <p>University of Virginia</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Satyajit Chatterjee</h4>
-          <p>Federal Reserve Bank of Philadelphia</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Sean Higgins</h4>
-          <p>Northwestern University</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Tetyana Balyuk</h4>
-          <p>Emory University</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Tianyue Ruan</h4>
-          <p>National University of Singapore</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Deeksha Gupta</h4>
-          <p>Johns Hopkins University</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Rodney Ramcharan</h4>
-          <p>University of Southern California</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Nishant Vats</h4>
-          <p>Washington University in St. Louis</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Thorsten Beck</h4>
-          <p>European University Institute</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Kunal Sachdeva</h4>
-          <p>University of Michigan, Ross School of Business</p>
-        </div>
-
-        <div class="seminar-entry">
-          <h4>Deniz Aydin</h4>
-          <p>MIT Sloan School of Management</p>
-        </div>
-
-      </div>
-       </div>
-        
-      <!-- ===================================== -->
-      <!-- 2024–2025 FINANCE SEMINARS -->
-      <!-- ===================================== -->
-
-      
-       <div class="seminar-year seminar-card" id="year-2024">
-      <div class="seminar-card-scroll">
-        
-        <h3>2024–2025</h3>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">25 October 2024</span>
-          <h4>Kim Fe Cramer</h4>
-          <p>London School of Economics</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">8 November 2024</span>
-          <h4>Chanik Jo</h4>
-          <p>Chinese University of Hong Kong Business School</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">15 November 2024</span>
-          <h4>Arkodipta Sarkar</h4>
-          <p>National University of Singapore</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">24 January 2025</span>
-          <h4>Shohini Kundu</h4>
-          <p>UCLA Anderson School of Management</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">31 January 2025</span>
-          <h4>Richard Thakor</h4>
-          <p>University of Minnesota, Carlson School of Management</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">7 February 2025</span>
-          <h4>Rachel Nam</h4>
-          <p>USI Lugano and Swiss Finance Institute</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">14 February 2025</span>
-          <h4>Marti Subrahmanyam</h4>
-          <p>New York University, Stern School of Business</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">21 February 2025</span>
-          <h4>Vidhan Goyal</h4>
-          <p>Hong Kong University of Science and Technology</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">28 February 2025</span>
-          <h4>Nicola Limodio</h4>
-          <p>Bocconi University</p>
-        </div>
-
-        <div class="seminar-entry">
-          <span class="seminar-date">7 March 2025</span>
-          <h4>Tony Cookson</h4>
-          <p>University of Colorado Boulder, Leeds School of Business</p>
-        </div>
-
-      </div>
-       </div>
-        </div> <!-- End seminar-card-grid -->
     </section>
 
   </main>
@@ -343,6 +259,286 @@
       © 2026 Vasudha Nukala · Indian School of Business
     </div>
   </footer>
+
+  <script>
+    /*
+      SEMINAR DATA
+
+      Each entry contains:
+      name, institution, date, author webpage, paper URL.
+
+      Add verified URLs in the last two fields.
+      Leave them empty when not yet available.
+    */
+
+    const seminars2026 = [
+      ["Rohit Alleha",
+       "University of Houston",
+       "7 August 2026", "", ""],
+
+      ["Susan Cherry",
+       "UT Austin",
+       "14 August 2026", "", ""],
+
+      ["Filipe Correia",
+       "University of Georgia",
+       "25 September 2026", "", ""],
+
+      ["Will Cassidy",
+       "WashU Olin",
+       "9 October 2026", "", ""],
+
+      ["Goutham Gopalakrishna",
+       "University of Toronto",
+       "23 October 2026", "", ""],
+
+      ["Daniel Paravisini",
+       "London School of Economics",
+       "6 November 2026", "", ""],
+
+      ["Hannes Wagner",
+       "Bocconi University",
+       "20 November 2026", "", ""],
+
+      ["Constantine Yannelis",
+       "University of Cambridge",
+       "4 December 2026", "", ""],
+
+      ["Sabrina Howell",
+       "Harvard Business School",
+       "17 December 2026", "", ""],
+
+      ["Thomas Flanagan",
+       "Ohio State University",
+       "5 February 2027", "", ""],
+
+      ["Joao Gomes",
+       "Wharton",
+       "19 February 2027", "", ""],
+
+      ["Alexander Copestake",
+       "IMF",
+       "26 February 2027", "", ""],
+
+      ["Barry Scholnick",
+       "University of Alberta",
+       "5 March 2027", "", ""],
+
+      ["Zacharias Sautner",
+       "University of Zurich",
+       "12 March 2027", "", ""],
+
+      ["Brett Green",
+       "WashU Olin",
+       "19 March 2027", "", ""],
+
+      ["Vaishali Garga",
+       "Federal Reserve Bank of Boston",
+       "26 March 2027", "", ""]
+    ];
+
+    const seminars2025 = [
+      ["Karsten Müller",
+       "National University of Singapore", "", "", ""],
+
+      ["Emilio Bisetti",
+       "HKUST", "", "", ""],
+
+      ["Naveen Gondhi",
+       "INSEAD", "", "", ""],
+
+      ["Agustin Hurtado",
+       "University of Maryland", "", "", ""],
+
+      ["Alminas Zaldokas",
+       "National University of Singapore", "", "", ""],
+
+      ["Elena Loutskina",
+       "University of Virginia", "", "", ""],
+
+      ["Satyajit Chatterjee",
+       "Philadelphia Fed", "", "", ""],
+
+      ["Sean Higgins",
+       "Northwestern University", "", "", ""],
+
+      ["Tetyana Balyuk",
+       "Emory University", "", "", ""],
+
+      ["Tianyue Ruan",
+       "National University of Singapore", "", "", ""],
+
+      ["Deeksha Gupta",
+       "Johns Hopkins University", "", "", ""],
+
+      ["Rodney Ramcharan",
+       "University of Southern California", "", "", ""],
+
+      ["Nishant Vats",
+       "Washington University in St. Louis", "", "", ""],
+
+      ["Thorsten Beck",
+       "European University Institute", "", "", ""],
+
+      ["Kunal Sachdeva",
+       "University of Michigan", "", "", ""],
+
+      ["Deniz Aydin",
+       "MIT Sloan", "", "", ""]
+    ];
+
+    const seminars2024 = [
+      ["Kim Fe Cramer",
+       "London School of Economics",
+       "25 October 2024", "", ""],
+
+      ["Chanik Jo",
+       "Chinese University of Hong Kong",
+       "8 November 2024", "", ""],
+
+      ["Arkodipta Sarkar",
+       "National University of Singapore",
+       "15 November 2024", "", ""],
+
+      ["Shohini Kundu",
+       "UCLA Anderson",
+       "24 January 2025", "", ""],
+
+      ["Richard Thakor",
+       "University of Minnesota",
+       "31 January 2025", "", ""],
+
+      ["Rachel Nam",
+       "USI Lugano / Swiss Finance Institute",
+       "7 February 2025", "", ""],
+
+      ["Marti Subrahmanyam",
+       "NYU Stern",
+       "14 February 2025", "", ""],
+
+      ["Vidhan Goyal",
+       "HKUST",
+       "21 February 2025", "", ""],
+
+      ["Nicola Limodio",
+       "Bocconi University",
+       "28 February 2025", "", ""],
+
+      ["Tony Cookson",
+       "University of Colorado Boulder",
+       "7 March 2025", "", ""]
+    ];
+
+    /*
+      PAPER ICON
+      Used for every seminar.
+    */
+
+    const paperIcon = `
+      <svg viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="1.8"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16
+                 a2 2 0 0 0 2 2h12
+                 a2 2 0 0 0 2-2V8z"/>
+        <path d="M14 2v6h6"/>
+        <path d="M8 13h8M8 17h8"/>
+      </svg>
+    `;
+
+    /*
+      BUILD ONE SPEAKER ROW
+    */
+
+    function createSeminarRow(seminar) {
+      const [
+        name,
+        institution,
+        date,
+        authorURL,
+        paperURL
+      ] = seminar;
+
+      const row = document.createElement("div");
+      row.className = "seminar-entry";
+
+      // Speaker name
+      const speaker = document.createElement("span");
+      speaker.className = "seminar-speaker";
+
+      if (date) {
+        speaker.title = "Seminar: " + date;
+      }
+
+      if (authorURL) {
+        const link = document.createElement("a");
+        link.href = authorURL;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = name;
+        speaker.appendChild(link);
+      } else {
+        speaker.textContent = name;
+      }
+
+      // Institution
+      const affiliation = document.createElement("span");
+      affiliation.className = "seminar-institution";
+      affiliation.textContent = institution;
+      affiliation.title = institution;
+
+      // Paper icon
+      let paper;
+
+      if (paperURL) {
+        paper = document.createElement("a");
+        paper.className = "seminar-paper-icon";
+        paper.href = paperURL;
+        paper.target = "_blank";
+        paper.rel = "noopener";
+        paper.title = "Read paper presented by " + name;
+        paper.setAttribute(
+          "aria-label",
+          "Read paper presented by " + name
+        );
+      } else {
+        paper = document.createElement("span");
+        paper.className =
+          "seminar-paper-icon unavailable";
+        paper.title = "Paper link not yet available";
+        paper.setAttribute("aria-hidden", "true");
+      }
+
+      paper.innerHTML = paperIcon;
+
+      row.appendChild(speaker);
+      row.appendChild(affiliation);
+      row.appendChild(paper);
+
+      return row;
+    }
+
+    /*
+      POPULATE EACH ACADEMIC YEAR
+    */
+
+    function renderSeminars(containerId, data) {
+      const container = document.getElementById(containerId);
+
+      data.forEach(function(seminar) {
+        container.appendChild(createSeminarRow(seminar));
+      });
+    }
+
+    renderSeminars("list-2026", seminars2026);
+    renderSeminars("list-2025", seminars2025);
+    renderSeminars("list-2024", seminars2024);
+
+  </script>
 
 </body>
 </html>
