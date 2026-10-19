@@ -577,3 +577,64 @@ header.top nav.links a {
   letter-spacing: normal !important;
   color: #475569 !important;
 }
+
+/* Published Papers heading */
+.research-subheading {
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+/* Make published paper titles match working papers */
+.paper h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.paper h3 a:hover {
+  color: var(--accent);
+}
+
+/* Publication year and journal badge */
+.publication-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Dark navy journal badge */
+.journal-badge {
+  display: inline-block;
+  background: #1b2742;
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+/* Paper link button */
+.paper-links {
+  margin: 12px 0;
+  font-size: 12px;
+}
+
+.paper-links a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #d8dde2;
+  border-radius: 3px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.paper-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
