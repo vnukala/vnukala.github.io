@@ -12,6 +12,25 @@
 
   <link rel="stylesheet" href="../style.css?v=3">
 
+  
+/* Remove horizontal lines above section headings */
+#field-notes .notes-section {
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+
+/* Keep only the line below each heading */
+#field-notes .notes-section h3 {
+  border-top: none !important;
+  border-bottom: 1px solid #e1e5e8;
+}
+
+/* Remove any divider between sections */
+#field-notes .notes-section::before {
+  display: none !important;
+}
+
+
   <style>
     /* Field Notes index */
 
