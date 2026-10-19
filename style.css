@@ -638,3 +638,57 @@ header.top nav.links a {
   border-color: var(--accent);
   color: var(--accent);
 }
+
+/* Published paper title links */
+#research .paper h3 a {
+  color: #24313c;
+  text-decoration: none;
+}
+
+#research .paper h3 a:hover {
+  color: #286183;
+}
+
+/* Year and publication badge */
+#research .publication-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 13px;
+  color: #777777;
+}
+
+#research .journal-badge {
+  display: inline-block;
+  background-color: #1b2742;
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+/* Outlined paper button */
+#research .paper-links {
+  margin: 12px 0;
+}
+
+#research .paper-links a {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #d8dde2;
+  border-radius: 3px;
+  color: #24313c;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#research .paper-links a:hover {
+  border-color: #286183;
+  color: #286183;
+}
