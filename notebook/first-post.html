@@ -1,0 +1,324 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My First Field Note | Vasudha Nukala</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* Individual Field Notes article */
+
+    .note-article {
+      max-width: 740px;
+      margin: 55px auto 100px;
+    }
+
+    .note-back {
+      display: inline-block;
+      margin-bottom: 30px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #777;
+      text-decoration: none;
+    }
+
+    .note-back:hover {
+      color: #28617e;
+    }
+
+    .note-article h1 {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #242424;
+      margin: 0 0 8px;
+    }
+
+    .note-date {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 36px;
+    }
+
+    /* Table of contents */
+
+    .note-toc {
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 18px 0 20px;
+      margin: 35px 0 38px;
+    }
+
+    .note-toc-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 12px;
+    }
+
+    .note-toc ol {
+      list-style: none;
+      counter-reset: section;
+      margin: 0;
+      padding: 0;
+    }
+
+    .note-toc li {
+      counter-increment: section;
+      display: flex;
+      gap: 12px;
+      margin: 10px 0;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .note-toc li::before {
+      content: counter(section) ".";
+      color: #aaa;
+      min-width: 14px;
+    }
+
+    .note-toc a {
+      color: #444;
+      text-decoration: none;
+    }
+
+    .note-toc a:hover {
+      color: #28617e;
+      text-decoration: underline;
+    }
+
+    /* Main article typography */
+
+    .note-body {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.65;
+      color: #252525;
+    }
+
+    .note-body p {
+      margin: 0 0 20px;
+    }
+
+    .note-body h2 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 42px 0 14px;
+      scroll-margin-top: 100px;
+    }
+
+    .note-body h3 {
+      font-family: Georgia, serif;
+      font-size: 19px;
+      margin: 28px 0 12px;
+    }
+
+    .note-body a {
+      color: #28617e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .note-body ul,
+    .note-body ol {
+      padding-left: 26px;
+      margin: 0 0 24px;
+    }
+
+    .note-body li {
+      margin-bottom: 10px;
+    }
+
+    /* Images and figures */
+
+    .note-figure {
+      margin: 35px 0;
+    }
+
+    .note-figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .note-figure figcaption {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #777;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    /* Closing link */
+
+    .note-bottom {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 25px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 720px) {
+      .note-article {
+        margin: 35px auto 70px;
+        padding: 0 12px;
+      }
+
+      .note-article h1 {
+        font-size: 28px;
+      }
+
+      .note-body {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Website navigation -->
+  <header class="top">
+    <div class="wrap nav">
+
+      <a class="brand" href="../index.html">
+        Vasudha Nukala
+      </a>
+
+      <nav class="links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../teaching/">Teaching</a>
+        <a href="../resources/">Resources ↗</a>
+        <a href="../notebook/">Field Notes ↗</a>
+        <a href="../seminars/">ISB Finance Seminars</a>
+        <a href="../index.html#cv">CV</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Article -->
+  <main class="wrap">
+
+    <article class="note-article">
+
+      <a class="note-back" href="./">
+        ← Field Notes
+      </a>
+
+      <h1>My First Field Note</h1>
+
+      <div class="note-date">
+        October 2026
+      </div>
+
+      <!-- Contents -->
+      <nav class="note-toc" aria-label="Table of contents">
+
+        <div class="note-toc-label">
+          Contents
+        </div>
+
+        <ol>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#question">The Question</a></li>
+          <li><a href="#evidence">Evidence</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+
+      </nav>
+
+      <!-- Article body -->
+      <div class="note-body">
+
+        <p>
+          This is the opening paragraph of my post.
+          I can introduce the observation, puzzle, or
+          research question that motivated this piece.
+          This paragraph appears before the first
+          section, just like in the reference website.
+        </p>
+
+        <h2 id="introduction">Introduction</h2>
+
+        <p>
+          This is where I introduce the topic and
+          explain why it is interesting.
+        </p>
+
+        <p>
+          I can write several paragraphs here.
+          The text uses a serif font, with generous
+          line spacing and a narrow reading width.
+        </p>
+
+        <h2 id="question">The Question</h2>
+
+        <p>
+          Here I explain the central question.
+          I can use <em>italics</em>,
+          <strong>bold text</strong>, and
+          <a href="https://www.nber.org/"
+             target="_blank" rel="noopener">
+            links to academic research
+          </a>.
+        </p>
+
+        <h2 id="evidence">Evidence</h2>
+
+        <p>
+          This section can include data, figures,
+          or empirical observations.
+        </p>
+
+        <!-- Optional figure:
+        <figure class="note-figure">
+          <img src="my-figure.png"
+               alt="Description of the figure">
+          <figcaption>
+            Figure 1. Description of the figure.
+          </figcaption>
+        </figure>
+        -->
+
+        <h2 id="conclusion">Conclusion</h2>
+
+        <p>
+          This is where I summarize the main insight
+          and discuss what remains unresolved.
+        </p>
+
+      </div>
+
+      <div class="note-bottom">
+        <a class="note-back" href="./">
+          ← Back to Field Notes
+        </a>
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      © 2026 Vasudha Nukala · Indian School of Business
+    </div>
+  </footer>
+
+</body>
+</html>
