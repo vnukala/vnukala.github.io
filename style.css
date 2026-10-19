@@ -1007,3 +1007,87 @@ header.top nav.links a {
 }
 
 
+/* ==========================================
+   SEMINAR PAGE - FULL WIDTH YEAR CARDS
+   ========================================== */
+
+/* Stack the three academic years vertically */
+#seminars .seminar-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+/* Each box takes the full available width */
+#seminars .seminar-card,
+#seminars #year-2024 {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 420px;
+  box-sizing: border-box;
+}
+
+/* Three columns: speaker, institution, paper icon */
+#seminars .seminar-card .seminar-entry {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1.5fr)
+    28px;
+  align-items: center;
+  column-gap: 24px;
+  padding: 13px 0;
+}
+
+/* Consistent font size for speaker and institution */
+#seminars .seminar-card .seminar-speaker,
+#seminars .seminar-card .seminar-institution {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Speaker name slightly bolder */
+#seminars .seminar-card .seminar-speaker {
+  font-weight: 600;
+}
+
+/* Institution gets more horizontal room */
+#seminars .seminar-card .seminar-institution {
+  font-weight: 400;
+  color: #78838d;
+}
+
+/* Keep the paper icon aligned to the right */
+#seminars .seminar-card .seminar-paper-icon {
+  justify-self: end;
+}
+
+/* If older date elements are still present,
+   make them match the other text */
+#seminars .seminar-card .seminar-date {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Mobile layout */
+@media (max-width: 720px) {
+  #seminars .seminar-card,
+  #seminars #year-2024 {
+    height: 400px;
+  }
+
+  #seminars .seminar-card .seminar-entry {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.2fr)
+      24px;
+    column-gap: 10px;
+  }
+
+  #seminars .seminar-card .seminar-speaker,
+  #seminars .seminar-card .seminar-institution {
+    font-size: 12px;
+  }
+}
+
+
