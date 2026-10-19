@@ -860,3 +860,83 @@ header.top nav.links a {
     padding: 20px;
   }
 }
+
+
+/* ==========================================
+   SEMINAR ARCHIVE - SCROLLABLE YEAR CARDS
+   ========================================== */
+
+#seminars .seminar-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+  align-items: stretch;
+}
+
+/* Match the Teaching page's bordered cards */
+#seminars .seminar-card {
+  border: 1px solid #e1e5e8;
+  border-radius: 4px;
+  padding: 25px 24px;
+  margin: 0;
+  min-width: 0;
+  height: 480px;
+  box-sizing: border-box;
+}
+
+/* Make each card scroll independently */
+#seminars .seminar-card-scroll {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5dc transparent;
+}
+
+/* Academic year heading */
+#seminars .seminar-card h3 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 22px;
+  color: var(--ink);
+  margin: 0 0 18px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e1e5e8;
+}
+
+/* Compact speaker entries */
+#seminars .seminar-card .seminar-entry {
+  padding: 12px 0;
+}
+
+#seminars .seminar-card .seminar-entry h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+#seminars .seminar-card .seminar-entry p {
+  font-size: 12px;
+}
+
+/* Make the third card span the full row */
+#seminars #year-2024 {
+  grid-column: 1 / -1;
+  height: 340px;
+}
+
+/* Mobile: stack the cards */
+@media (max-width: 720px) {
+  #seminars .seminar-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #seminars .seminar-card {
+    height: 420px;
+  }
+
+  #seminars #year-2024 {
+    grid-column: auto;
+    height: 420px;
+  }
+}
+
