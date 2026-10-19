@@ -692,3 +692,36 @@ header.top nav.links a {
   border-color: #286183;
   color: #286183;
 }
+
+
+
+/* ==========================================
+   TEACHING PAGE
+   ========================================== */
+
+.teaching-institution {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 40px;
+  margin-bottom: 22px;
+}
+
+.teaching-group {
+  margin-bottom: 28px;
+}
+
+.teaching-group h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.teaching-group p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
