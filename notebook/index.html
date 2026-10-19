@@ -7,32 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Field Notes | Vasudha Nukala</title>
+
   <meta name="description"
         content="Field Notes by Vasudha Nukala">
 
   <link rel="stylesheet" href="../style.css?v=3">
 
-  
-/* Remove horizontal lines above section headings */
-#field-notes .notes-section {
-  border-top: none !important;
-  padding-top: 0 !important;
-}
-
-/* Keep only the line below each heading */
-#field-notes .notes-section h3 {
-  border-top: none !important;
-  border-bottom: 1px solid #e1e5e8;
-}
-
-/* Remove any divider between sections */
-#field-notes .notes-section::before {
-  display: none !important;
-}
-
-
   <style>
-    /* Field Notes index */
+
+    /* =====================================
+       FIELD NOTES PAGE
+       ===================================== */
 
     #field-notes {
       max-width: 900px;
@@ -45,9 +30,18 @@
       margin: 16px 0 42px;
     }
 
-    /* Preserve category headings */
+    /* =====================================
+       CATEGORY SECTIONS
+       ===================================== */
+
     #field-notes .notes-section {
       margin: 40px 0 48px;
+      border-top: none;
+      padding-top: 0;
+    }
+
+    #field-notes .notes-section::before {
+      display: none;
     }
 
     #field-notes .notes-section h3 {
@@ -56,88 +50,105 @@
       color: var(--ink);
       margin: 0 0 16px;
       padding-bottom: 12px;
+
+      /* Line below heading only */
+      border-top: none;
       border-bottom: 1px solid #e1e5e8;
     }
 
-    
-/* Consistent compact post lists */
+    /* =====================================
+       COMPACT NOTE LISTS
+       ===================================== */
 
-#field-notes .notes-list {
-  list-style: disc;
-  padding-left: 20px;
-  margin: 0;
-}
-
-#field-notes .notes-list li {
-  padding: 5px 0;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-#field-notes .note-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px;
-  column-gap: 20px;
-  align-items: baseline;
-}
-
-/* All post titles look the same */
-#field-notes .note-title,
-#field-notes .note-title a {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #252525;
-  text-decoration: none;
-}
-
-#field-notes .note-title a:hover {
-  color: #28617e;
-  text-decoration: underline;
-}
-
-/* Consistent dates and statuses */
-#field-notes .note-date {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #444;
-  text-align: right;
-  white-space: nowrap;
-}
-
-#field-notes .note-planned {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #888;
-  text-align: right;
-}
-    #field-notes .notes-empty {
-      color: #78838d;
-      font-size: 14px;
-      line-height: 1.7;
-      margin: 12px 0;
+    #field-notes .notes-list {
+      list-style: disc;
+      padding-left: 20px;
+      margin: 0;
     }
 
+    #field-notes .notes-list li {
+      padding: 5px 0;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    #field-notes .note-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 150px;
+      column-gap: 20px;
+      align-items: baseline;
+    }
+
+    /* =====================================
+       POST TITLES
+       ===================================== */
+
+    #field-notes .note-title,
+    #field-notes .note-title a {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #252525;
+      text-decoration: none;
+    }
+
+    /* Hover effect on clickable titles */
+    #field-notes .note-title a:hover {
+      color: #28617e;
+      text-decoration: underline;
+    }
+
+    /* =====================================
+       DATES AND STATUSES
+       ===================================== */
+
+    #field-notes .note-date {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #444;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    #field-notes .note-planned {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #888;
+      text-align: right;
+    }
+
+    /* =====================================
+       MOBILE
+       ===================================== */
+
     @media (max-width: 650px) {
+
       #field-notes .note-row {
         grid-template-columns: minmax(0, 1fr);
         row-gap: 2px;
       }
 
-      #field-notes .note-date {
+      #field-notes .note-date,
+      #field-notes .note-planned {
         text-align: left;
         font-size: 12px;
         color: #888;
       }
+
     }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- =====================================
+       NAVIGATION
+       ===================================== -->
+
   <header class="top">
     <div class="wrap nav">
 
@@ -158,7 +169,11 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
+
+  <!-- =====================================
+       MAIN CONTENT
+       ===================================== -->
+
   <main class="wrap">
 
     <section id="field-notes">
@@ -175,100 +190,126 @@
       </p>
 
 
-<!-- ============================ -->
-<!-- RESEARCH NOTES -->
-<!-- ============================ -->
+      <!-- =====================================
+           RESEARCH NOTES
+           ===================================== -->
 
-<section class="notes-section">
+      <section class="notes-section">
 
-  <h3>Research Notes</h3>
+        <h3>Research Notes</h3>
 
-  <ul class="notes-list">
+        <ul class="notes-list">
 
-   
+          <!--
+          ADD PUBLISHED RESEARCH POSTS HERE
 
-    <!-- Add new research posts here -->
+          Example:
 
-  </ul>
+          <li>
+            <div class="note-row">
+              <span class="note-title">
+                <a href="research-post.html">
+                  Title of Research Post
+                </a>
+              </span>
+              <span class="note-date">
+                October 2026
+              </span>
+            </div>
+          </li>
+          -->
 
-</section>
+        </ul>
 
-
-<!-- ============================ -->
-<!-- TEACHING & ACADEMIA -->
-<!-- ============================ -->
-
-<section class="notes-section">
-
-  <h3>Teaching & Academia</h3>
-
-  <ul class="notes-list">
-
-    <li>
-      <div class="note-row">
-        <span class="note-title">
-          What Makes a Good M&A Deal?
-        </span>
-        <span class="note-planned">
-          Planned
-        </span>
-      </div>
-    </li>
-
-    <li>
-      <div class="note-row">
-        <span class="note-title">
-          The Story Behind a DCF
-        </span>
-        <span class="note-planned">
-          Planned
-        </span>
-      </div>
-    </li>
-
-    <!-- Add new teaching posts here -->
-
-  </ul>
-
-</section>
+      </section>
 
 
-<!-- ============================ -->
-<!-- SEMINARS & CONFERENCES -->
-<!-- ============================ -->
+      <!-- =====================================
+           TEACHING & ACADEMIA
+           ===================================== -->
 
-<section class="notes-section">
+      <section class="notes-section">
 
-  <h3>Seminars & Conference Notes</h3>
+        <h3>Teaching & Academia</h3>
 
-  <ul class="notes-list">
+        <ul class="notes-list">
 
-    <li>
-      <div class="note-row">
-        <span class="note-title">
-          <a href="conference-reflections.html">
-            Reflections from a Finance Conference
-          </a>
-        </span>
-        <span class="note-date">
-          November 2026
-        </span>
-      </div>
-    </li>
+          <li>
+            <div class="note-row">
 
-    <!-- Add new seminar posts here -->
+              <span class="note-title">
+                What Makes a Good M&amp;A Deal?
+              </span>
 
-  </ul>
+              <span class="note-planned">
+                Planned
+              </span>
 
-</section>
-      
+            </div>
+          </li>
+
+          <li>
+            <div class="note-row">
+
+              <span class="note-title">
+                The Story Behind a DCF
+              </span>
+
+              <span class="note-planned">
+                Planned
+              </span>
+
+            </div>
+          </li>
+
+          <!-- Add future teaching posts here -->
+
+        </ul>
+
+      </section>
+
+
+      <!-- =====================================
+           SEMINARS & CONFERENCE NOTES
+           ===================================== -->
+
+      <section class="notes-section">
+
+        <h3>Seminars &amp; Conference Notes</h3>
+
+        <ul class="notes-list">
+
+          <li>
+            <div class="note-row">
+
+              <span class="note-title">
+                <a href="conference-reflections.html">
+                  Reflections from a Finance Conference
+                </a>
+              </span>
+
+              <span class="note-date">
+                November 2026
+              </span>
+
+            </div>
+          </li>
+
+          <!-- Add future seminar posts here -->
+
+        </ul>
+
       </section>
 
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- =====================================
+       FOOTER
+       ===================================== -->
+
   <footer class="footer">
     <div class="wrap">
       © 2026 Vasudha Nukala · Indian School of Business
