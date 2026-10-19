@@ -753,3 +753,20 @@ header.top nav.links a {
   padding-top: 35px;
   margin-top: 45px;
 }
+
+/* Reduce spacing between Olin courses only */
+
+#teaching .olin-courses .paper {
+  margin-bottom: 14px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+#teaching .olin-courses .paper h3 {
+  margin-bottom: 4px;
+}
+
+#teaching .olin-courses .paper .meta {
+  margin-top: 0;
+  margin-bottom: 0;
+}
